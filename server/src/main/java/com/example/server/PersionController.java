@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "persion")
 public class PersionController {
 
-    @RequestMapping(value = "getPersionName")
+    @RequestMapping(value = "/getPersionName")
     public String getPersionName(String id){
         return "yubx";
     }
