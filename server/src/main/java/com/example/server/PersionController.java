@@ -1,6 +1,7 @@
 package com.example.server;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PersionController {
 
     @RequestMapping(value = "/getPersionName")
-    public String getPersionName(String id){
-        return "yubx";
+    public String getPersionName(@RequestParam String id){
+        return "yubx:"+id;
     }
 }
