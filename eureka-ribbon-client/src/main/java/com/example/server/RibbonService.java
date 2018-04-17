@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.example.server;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +11,11 @@ public class RibbonService {
     RestTemplate restTemplate;
 
     @HystrixCommand(fallbackMethod = "hiError")
-    public String hi(String name) {
+    public String getName(String name) {
         return restTemplate.getForObject("http://localhost:8080/persion/getPersionName?id="+name,String.class);
+    }
+    public String hi(String name) {
+        return restTemplate.getForObject("http://localhost:8080/hi?name="+name,String.class);
     }
 
     public String hiError(String name) {
