@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "persion")
+@RequestMapping(value = "/person")
 public class PersionController {
 
     @Value("${server.port}")
