@@ -12,10 +12,10 @@ public class RibbonService {
 
     @HystrixCommand(fallbackMethod = "hiError")
     public String getName(String name) {
-        return restTemplate.getForObject("http://localhost:8080/persion/getPersionName?id="+name,String.class);
+        return restTemplate.getForObject("http://person-server/person/getPersionName?id="+name,String.class);
     }
     public String hi(String name) {
-        return restTemplate.getForObject("http://localhost:8080/hi?name="+name,String.class);
+        return restTemplate.getForObject("http://person-server/person/hi?name="+name,String.class);
     }
 
     public String hiError(String name) {

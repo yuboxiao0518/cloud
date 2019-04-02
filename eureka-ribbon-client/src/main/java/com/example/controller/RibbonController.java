@@ -14,7 +14,7 @@ public class RibbonController {
 
     @RequestMapping(value = "/ribbon-consumer",method = RequestMethod.GET)
     public String helloConeumer(){
-        return ribbonService.hi("yubx");
+        return ribbonService.getName("yubx");
     }
 
     @GetMapping("/hi")
