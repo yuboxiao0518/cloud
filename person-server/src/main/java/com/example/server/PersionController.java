@@ -19,7 +19,7 @@ public class PersionController {
     }
 
     @GetMapping("/hi")
-    public String home(@RequestParam String name) {
+    public String hi(@RequestParam String name) {
         return "hi "+name+",i am from port:" +port;
     }
 }
