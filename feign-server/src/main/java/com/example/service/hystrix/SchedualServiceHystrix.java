@@ -9,7 +9,7 @@ public class SchedualServiceHystrix implements SchedualService {
 	@Override
 	public String homeformClientOne(String name) {
 		// TODO Auto-generated method stub
-		return "Sorry"+name;
+		return "Sorry "+name;
 	}
 
 }
