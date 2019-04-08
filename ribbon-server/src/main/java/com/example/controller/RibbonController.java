@@ -7,12 +7,13 @@ import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/ribbon")
 public class RibbonController {
 
     @Autowired
     private RibbonService ribbonService;
 
-    @RequestMapping(value = "/ribbon-consumer",method = RequestMethod.GET)
+    @RequestMapping(value = "/getName",method = RequestMethod.GET)
     public String helloConeumer(){
         return ribbonService.getName("yubx");
     }

@@ -14,4 +14,4 @@ zuul:
       serviceId: feign-server
     api-b:
       path: /api-b/**
-      serviceId: ribbon-consumer
+      serviceId: ribbon-server

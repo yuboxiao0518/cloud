@@ -13,7 +13,7 @@
     <modules>
         <module>person-server</module>
         <module>sureka-server</module>
-        <module>eureka-ribbon-client</module>
+        <module>ribbon-server</module>
         <module>feign-server</module>
         <module>zuul-server</module>
     </modules>

@@ -15,7 +15,7 @@ public class PersionController {
 
     @RequestMapping(value = "/getPersionName")
     public String getPersionName(@RequestParam String id){
-        return "yubx:"+id;
+        return "name: "+id;
     }
 
     @GetMapping("/hi")
