@@ -19,5 +19,12 @@ public class SchedualController {
 	public String sayHi(@RequestParam(value = "name") String name) {
 		return schedualService.homeformClientOne(name);
 	}
+	
+	@RequestMapping(value = "/queryLog", method = RequestMethod.GET)
+	public String sayHi() {
+		return schedualService.queryLog();
+	}
+	
+	
 
 }

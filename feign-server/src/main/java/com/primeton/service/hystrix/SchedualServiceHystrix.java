@@ -12,4 +12,10 @@ public class SchedualServiceHystrix implements SchedualService {
 		return "Sorry "+name;
 	}
 
+	@Override
+	public String queryLog() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

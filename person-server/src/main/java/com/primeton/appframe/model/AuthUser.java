@@ -15,6 +15,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import lombok.Data;
+
 /**
  * ClassName:AuthUser <br/>
  * Function: TODO ADD FUNCTION. <br/>

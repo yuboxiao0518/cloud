@@ -12,5 +12,8 @@ public interface SchedualService {
 
 	@RequestMapping(value = "/person/hi", method = RequestMethod.GET)
 	String homeformClientOne(@RequestParam(value = "name") String name);
+	
+	@RequestMapping(value="/admin/log/queryPage",method=RequestMethod.GET)
+	String queryLog();
 
 }
