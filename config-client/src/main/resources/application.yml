@@ -7,7 +7,6 @@ spring:
     config:
       label: master
       profile: dev
-      uri: http://config-server/8888/
       discovery:
         enabled: true
         service-id: config-server
