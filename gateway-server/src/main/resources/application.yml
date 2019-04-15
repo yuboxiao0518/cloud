@@ -1,0 +1,20 @@
+server:
+  port: 8800
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+      - id: person-server
+        uri: lb://PERSON-SERVER
+        predicates: Path=/demo/**
+        filters: StripPrefix=1
+eureka:
+  client:
+    service-url:
+      defualtZone: http://localhost:8761/eureka/
