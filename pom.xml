@@ -12,7 +12,7 @@
 
     <modules>
         <module>person-server</module>
-        <module>sureka-server</module>
+        <module>eureka-server</module>
         <module>ribbon-server</module>
         <module>feign-server</module>
         <module>zuul-server</module>
