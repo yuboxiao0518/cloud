@@ -15,10 +15,8 @@ import org.apache.commons.lang3.StringUtils;
 import com.primeton.appframe.common.pojo.AjaxResult;
 import com.primeton.appframe.common.pojo.ParamData;
 
-
 /**
- * 参数工具类
- * ClassName: AppUtil <br/>
+ * 参数工具类 ClassName: AppUtil <br/>
  * Function: TODO ADD FUNCTION. <br/>
  * Reason: TODO ADD REASON(可选). <br/>
  * date: 2017年10月17日 下午12:35:20 <br/>
@@ -30,13 +28,14 @@ public class AppUtil {
 
 	/**
 	 * 检验参数
+	 * 
 	 * @param key
 	 * @param data
 	 * @return
 	 */
 	public static String checkParam(ParamData params, String[] args) {
 		String result = null;
-		if(null != args && args.length > 0){
+		if (null != args && args.length > 0) {
 			int size = args.length;
 			for (int i = 0; i < size; i++) {
 				String param = args[i];
@@ -55,6 +54,7 @@ public class AppUtil {
 
 	/**
 	 * 封装接口返回数据
+	 * 
 	 * @param result
 	 * @return
 	 */
@@ -67,6 +67,7 @@ public class AppUtil {
 
 	/**
 	 * 封装带数据的返回
+	 * 
 	 * @param result
 	 * @param data
 	 * @return
@@ -80,6 +81,7 @@ public class AppUtil {
 
 	/**
 	 * 封装带集合的返回
+	 * 
 	 * @param result
 	 * @param T
 	 * @return
@@ -94,6 +96,7 @@ public class AppUtil {
 
 	/**
 	 * 封装分页查询返回
+	 * 
 	 * @param result
 	 * @param list
 	 * @return
@@ -101,10 +104,10 @@ public class AppUtil {
 	public static <T> AjaxResult returnPage(String result, List<T> list) {
 		return returnObj(result, list);
 	}
-	
 
 	/**
 	 * 比较两个实体类属性值是否相等
+	 * 
 	 * @param source
 	 * @param target
 	 * @return
@@ -134,6 +137,7 @@ public class AppUtil {
 
 	/**
 	 * 根据字段名称取值
+	 * 
 	 * @param obj
 	 * @param fieldName
 	 * @return
@@ -143,12 +147,13 @@ public class AppUtil {
 		@SuppressWarnings("rawtypes")
 		Class beanClass = obj.getClass();
 		Method[] ms = beanClass.getMethods();
-		for(Method method: ms){
+		for (Method method : ms) {
 			// 非get方法不取
-			if(method.getName().startsWith("get")){
+			if (method.getName().startsWith("get")) {
 				Object objValue = method.invoke(obj, new Object[] {});
-				if(null != objValue){
-					if(method.getName().toUpperCase().equals(fieldName.toUpperCase()) || method.getName().substring(3).toUpperCase().equals(fieldName.toUpperCase())){
+				if (null != objValue) {
+					if (method.getName().toUpperCase().equals(fieldName.toUpperCase())
+							|| method.getName().substring(3).toUpperCase().equals(fieldName.toUpperCase())) {
 						return objValue;
 					}
 				}
@@ -159,6 +164,7 @@ public class AppUtil {
 
 	/**
 	 * 生成N位随机数
+	 * 
 	 * @param length
 	 * @return
 	 */
@@ -188,6 +194,7 @@ public class AppUtil {
 
 	/**
 	 * 生成N位纯数字验证码
+	 * 
 	 * @return
 	 */
 	public static String getVerificationCode(int n) {
@@ -201,6 +208,7 @@ public class AppUtil {
 
 	/**
 	 * 生产注单号
+	 * 
 	 * @return
 	 */
 	public static String getOrdercode() {
@@ -210,24 +218,24 @@ public class AppUtil {
 
 	/**
 	 * 生成32位UUID
+	 * 
 	 * @return
 	 */
 	public static String getUuid() {
 		return UUID.randomUUID().toString().replace("-", "");
 	}
 
-	/** 
-	 * 随机ID生成器，由数字、小写字母和大写字母组成 
-	 * @param size 
-	 * @return 
+	/**
+	 * 随机ID生成器，由数字、小写字母和大写字母组成
+	 * 
+	 * @param size
+	 * @return
 	 */
 	public static String getUUID(int size) {
-		final char[] digits = { '0', '1', '2', '3', '4', '5', '6', '7', '8',
-				'9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
-				'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
-				'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
-				'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
-				'Z' };
+		final char[] digits = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g',
+				'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B',
+				'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W',
+				'X', 'Y', 'Z' };
 		Random random = new Random();
 		char[] cs = new char[size];
 		for (int i = 0; i < cs.length; i++) {
@@ -235,54 +243,28 @@ public class AppUtil {
 		}
 		return new String(cs);
 	}
-	
+
 	/**
 	 * 相除
+	 * 
 	 * @param num1
 	 * @param num2
 	 * @return
 	 */
-	public static String divide(Object num1, Object num2){
+	public static String divide(Object num1, Object num2) {
 		Float num = Float.parseFloat(num1.toString());
 		BigDecimal b1 = new BigDecimal(num);
 		BigDecimal b2 = new BigDecimal(num2.toString());
 		Double result = b1.divide(b2, 2, RoundingMode.HALF_UP).doubleValue();
 		return new DecimalFormat("#,##0.00").format(result);
 	}
-	
-	public static String formatValue(double source){
+
+	public static String formatValue(double source) {
 		return new DecimalFormat("###0.00").format(source);
 	}
-	
-	public static Double formatDouble(double source){
-		return Double.parseDouble(formatValue(source));
-	}
 
-	public static void main(String[] args) {
-		for(int i = 1; i <= 5; i++){
-			System.out.println(getUuid());
-		}
-//		System.out.println(getUUID(5));
-		// Set<String> sets = new HashSet<String>();
-		// for(int i = 0; i < 1000000; i ++){
-		// sets.add(getRandomString(20));
-		// }
-		// System.out.println(sets.size());
-		// System.out.println(getRandomString(20));
-//		AuthOperation op1 = new AuthOperation();
-//		op1.setOpCode("002");
-//		op1.setOpid(1);
-//
-//		AuthOperation op2 = new AuthOperation();
-//		op2.setOpCode("002");
-//		op2.setOpid(1);
-//		try {
-//			System.out.println(entityIsEquals(op1, op2));
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-		System.out.println(divide(10, "0.75"));
+	public static Double formatDouble(double source) {
+		return Double.parseDouble(formatValue(source));
 	}
 
 }

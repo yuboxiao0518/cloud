@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: person-server
+  datasource:
+    url: jdbc:mysql://10.200.39.222:3306/sys?serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+  mvc:
+    view:
+      prefix: /WEB-INF/pages/
+      suffix: .jsp
+  redis:
+    database: 0
+    host: 192.168.99.100
+    port: 6379
+    jedis:
+      pool:
+        max-active: 20
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 500
+server:
+  port: 8081
+eureka:
+  client:
+    service-url:
+      defualtZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
+  instance:
+    prefer-ip-address: true
+logging:
+  file: logs/log.log
+  level:
+    tk:
+      mybatis: TRACE
+mybatis:
+  type-aliases-package: com.primeton.appframe.*.model
+  mapper-locations:
+  - classpath:mapper/*.xml
+mapper:
+  not-empty: false
+  identity: MYSQL
+  mappers:
+  - com.primeton.appframe.common.dao.MyMapper
+global:
+  upload:
+    path: /upload/
+    docBase: /service/upload/
