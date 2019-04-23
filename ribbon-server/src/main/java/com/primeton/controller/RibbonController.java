@@ -23,6 +23,11 @@ public class RibbonController {
     public String hi(@RequestParam(required = false,defaultValue = "forezp") String name){
         return ribbonService.hi(name);
     }
+    
+    @GetMapping("/getmsg")
+    public String getMsg() {
+    	return ribbonService.getmsg();
+    }
 
     @Autowired
     private LoadBalancerClient loadBalancer;

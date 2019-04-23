@@ -19549,3 +19549,31 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2019-04-17 17:34:26.827  INFO 12532 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2019-04-17 17:39:26.830  INFO 12532 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2019-04-17 17:44:26.834  INFO 12532 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-04-17 17:49:26.840  INFO 12532 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-04-17 17:54:26.846  INFO 12532 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-04-17 17:59:26.852  INFO 12532 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-04-17 18:04:26.860  INFO 12532 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-04-17 18:09:26.866  INFO 12532 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-04-17 18:14:26.876  INFO 12532 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-04-17 18:19:29.664  INFO 12532 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-04-17 18:24:29.669  INFO 12532 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-04-17 18:28:23.388  INFO 12532 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-17 18:28:23.389  INFO 12532 --- [RMI TCP Connection(2)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@291a7e3c: startup date [Wed Apr 17 17:29:11 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@5c33f1a9
+2019-04-17 18:28:23.389  INFO 12532 --- [RMI TCP Connection(2)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PERSON-SERVER with eureka with status DOWN
+2019-04-17 18:28:23.390  WARN 12532 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1555496903390, current=DOWN, previous=UP]
+2019-04-17 18:28:23.392  INFO 12532 --- [RMI TCP Connection(2)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2019-04-17 18:28:23.392  INFO 12532 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PERSON-SERVER/PC-20151030YROS:person-server:8081: registering service...
+2019-04-17 18:28:23.393  INFO 12532 --- [RMI TCP Connection(2)-127.0.0.1] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-04-17 18:28:23.393  INFO 12532 --- [RMI TCP Connection(2)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-04-17 18:28:23.397  INFO 12532 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2019-04-17 18:28:23.398  INFO 12532 --- [RMI TCP Connection(2)-127.0.0.1] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-04-17 18:28:23.398  INFO 12532 --- [RMI TCP Connection(2)-127.0.0.1] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-04-17 18:28:23.398  INFO 12532 --- [RMI TCP Connection(2)-127.0.0.1] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-04-17 18:28:23.399  INFO 12532 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-04-17 18:28:23.400  INFO 12532 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-04-17 18:28:23.577  INFO 12532 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-04-17 18:28:23.582  WARN 12532 --- [RMI TCP Connection(2)-127.0.0.1] .s.c.a.CommonAnnotationBeanPostProcessor : Invocation of destroy method failed on bean with name 'scopedTarget.eurekaClient': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'eurekaInstanceConfigBean': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2019-04-17 18:28:23.582  INFO 12532 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-17 18:28:23.597  INFO 12532 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-17 18:28:24.819  INFO 12532 --- [RMI TCP Connection(2)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-04-17 18:28:24.822  INFO 12532 --- [localhost-startStop-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'

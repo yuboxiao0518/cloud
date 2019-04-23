@@ -26,7 +26,7 @@ server:
 eureka:
   client:
     service-url:
-      defualtZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
+      defualtZone: http://eureka1:8761/eureka/#,http://eureka2:8762/eureka/
   instance:
     prefer-ip-address: true
 logging:

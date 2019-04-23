@@ -16,7 +16,7 @@ spring:
       trace:
         enabled: true
   rabbitmq:
-    host: localhost
+    host: 192.168.99.100
     port: 5672
     username: guest
     password: guest
@@ -26,7 +26,9 @@ server:
 eureka:
   client:
     service-url:
-      defualtZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+      defualtZone: http://localhost:8761/eureka/#,http://localhost:8762/eureka/
+
+
 
 management:
   endpoints:

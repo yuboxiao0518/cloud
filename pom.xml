@@ -32,6 +32,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring-cloud.version>Finchley.SR2</spring-cloud.version>
+        <sys-client.version>0.0.1-SNAPSHOT</sys-client.version>
     </properties>
 
     <dependencies>
@@ -64,6 +65,11 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			 <dependency>
+	            <groupId>com.primeton</groupId>
+	            <artifactId>sys-client</artifactId>
+	            <version>${sys-client.version}</version>
+	        </dependency>
 		</dependencies>
 	</dependencyManagement>
 

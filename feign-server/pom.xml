@@ -16,6 +16,11 @@
 	
 	<name>feign-server</name>
 	<description>Demo project for Spring Boot</description>
+	
+	<properties>
+        <sys-client.version>0.0.1-SNAPSHOT</sys-client.version>
+    </properties>
+	
 
 	<dependencies>
 		<dependency>
@@ -35,6 +40,10 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.primeton</groupId>
+            <artifactId>sys-client</artifactId>
         </dependency>
 	</dependencies>
 
